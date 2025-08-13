@@ -9,13 +9,13 @@ pipeline {
         APP_NAME = 'techsolutions'
     }
 
-    stages {
-        stage('Checkout') {
-            steps {
-                echo 'Checking out source code...'
-                git 'https://github.com/khansaab-danish/microservices-ingress-danish.git'
-            }
-        }
+   stage('Checkout') {
+    steps {
+        echo 'Checking out source code...'
+        git branch: 'main', url: 'https://github.com/khansaab-danish/microservices-ingress-danish.git'
+    }
+}
+
 
         stage('Build Docker Image') {
             steps {
