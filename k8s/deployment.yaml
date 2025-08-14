@@ -46,7 +46,7 @@ metadata:
   name: techsolutions-service
   namespace: default
   labels:
-    app: techsolutions
+    app: techsolutions-app
 spec:
   type: ClusterIP
   ports:
@@ -54,4 +54,4 @@ spec:
     targetPort: 80
     protocol: TCP
   selector:
-    app: techsolutions
+    app: techsolutions-app
